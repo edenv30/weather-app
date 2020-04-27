@@ -1,0 +1,20 @@
+.logo-container1 {
+    position: absolute;
+    top: 40px; right: 40px;
+    padding: 30px 50px 75px;
+    display: flex;
+    align-items: center;
+
+    span {
+        cursor: pointer;
+        .logo1 {
+            height: 70px;
+            width: 40px;
+            padding: 25px;
+        }
+        
+    }
+
+    
+}
+
