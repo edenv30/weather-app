@@ -4,15 +4,22 @@
     padding: 30px 50px 75px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
     span {
         cursor: pointer;
         .logo1 {
             height: 70px;
             width: 40px;
-            padding: 25px;
+            // padding: 25px;
         }
         
+    }
+
+    .text-logo1 {
+        // font-size: 10px ; 
+        height: 70px;
+        width: 40px;
     }
 
     

@@ -9,10 +9,10 @@ const FavoriteLogoDirectory = () => (
     <div className='logo-container1'>
         <span>
             <EmptyLogo className='logo1'/>
-            <div className='logo1'>
-                <p>Add to favorite</p>
-            </div>
         </span>
+        <div className='text-logo1'>
+            <p>Add to favorite</p>
+        </div>
     </div>
 );
 

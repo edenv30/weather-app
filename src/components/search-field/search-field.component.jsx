@@ -1,15 +1,60 @@
 import React from 'react';
-import { MDBCol, MDBIcon } from 'mdbreact';
+import { createStructuredSelector } from 'reselect';
 
-const SearchField = () => {
+import { ReactSearchAutocomplete } from "react-search-autocomplete";
+
+import { connect } from 'react-redux';
+
+import { fetchCitiesStartAsync, searchCity } from '../../redux/city/city.actions';
+import { selectAutocompleteCities } from '../../redux/city/city.selectors';
+
+import './search-field.styles.scss';
+
+const SearchField = ({ autocompleteCities, fetchCitiesStartAsync }) => {
+
+  const handleOnSearch = (string, cached) => {
+    // onSearch returns the string searched and if
+    // the values are cached. If the values are cached
+    // "cached" contains the cached values, if not, returns false
+    fetchCitiesStartAsync(string);
+    console.log('handleOnSearch: ',string, cached);
+  }
+
+  const handleOnSelect = item => {
+    // the item selected
+    console.log('handleOnSelect: ',item);
+  }
+
+  const handleOnFocus = () => {
+    console.log("Focused");
+  }
+
+
   return (
-    <MDBCol md='6'>
-      <form className="form-inline mt-4 mb-4">
-        <MDBIcon icon="search" />
-        <input className="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search" aria-label="Search" />
-      </form>
-    </MDBCol>
+    <div>
+        <div className='autocomplete'>
+          <ReactSearchAutocomplete
+            items={autocompleteCities}
+            onSearch={handleOnSearch}
+            onSelect={handleOnSelect}
+            onFocus={handleOnFocus}
+            autoFocus
+            />
+        </div>
+    </div>
   );
 }
 
-export default SearchField;
+const mapStateToProps = createStructuredSelector({
+  autocompleteCities: selectAutocompleteCities
+})
+
+// const mapStateToProps = state => ({
+//   autocompleteCities: state.city.autocompleteCities
+// });
+
+const mapDispatchToProps = dispatch => ({
+  fetchCitiesStartAsync: city => dispatch(fetchCitiesStartAsync(city))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(SearchField);

@@ -8,7 +8,7 @@ import './directory.styles.scss';
 import CardDaysContainer from '../card-days-container/card-days-container.component';
 
 const Directory = () => (
-    <div>
+    <div className='directory'>
         <LogoDirectory />
         <FavoriteLogoDirectory />
         <h1>Scattered clouds</h1>

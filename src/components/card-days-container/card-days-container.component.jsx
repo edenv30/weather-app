@@ -9,7 +9,7 @@ import './card-days-container.styles.scss';
 const CardDaysContainer = () => (
     <div className='cards-directory'>
        {days.map(day => (
-           <CardHome key={days.id} day={day} />
+           <CardHome key={day.id} day={day} />
        ))}
     </div>
 );
