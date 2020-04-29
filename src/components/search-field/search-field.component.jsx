@@ -5,12 +5,12 @@ import { ReactSearchAutocomplete } from "react-search-autocomplete";
 
 import { connect } from 'react-redux';
 
-import { fetchCitiesStartAsync, searchCity } from '../../redux/city/city.actions';
+import { fetchCitiesStartAsync, setSelectedCity } from '../../redux/city/city.actions';
 import { selectAutocompleteCities } from '../../redux/city/city.selectors';
 
 import './search-field.styles.scss';
 
-const SearchField = ({ autocompleteCities, fetchCitiesStartAsync }) => {
+const SearchField = ({ autocompleteCities, fetchCitiesStartAsync, setSelectedCity }) => {
 
   const handleOnSearch = (string, cached) => {
     // onSearch returns the string searched and if
@@ -22,6 +22,7 @@ const SearchField = ({ autocompleteCities, fetchCitiesStartAsync }) => {
 
   const handleOnSelect = item => {
     // the item selected
+    setSelectedCity(item);
     console.log('handleOnSelect: ',item);
   }
 
@@ -47,14 +48,11 @@ const SearchField = ({ autocompleteCities, fetchCitiesStartAsync }) => {
 
 const mapStateToProps = createStructuredSelector({
   autocompleteCities: selectAutocompleteCities
-})
-
-// const mapStateToProps = state => ({
-//   autocompleteCities: state.city.autocompleteCities
-// });
+});
 
 const mapDispatchToProps = dispatch => ({
-  fetchCitiesStartAsync: city => dispatch(fetchCitiesStartAsync(city))
+  fetchCitiesStartAsync: city => dispatch(fetchCitiesStartAsync(city)),
+  setSelectedCity: city => dispatch(setSelectedCity(city))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SearchField);

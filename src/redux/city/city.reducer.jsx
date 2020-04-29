@@ -2,7 +2,7 @@ import { setAutocompleteCities } from './city.utils';
 import CityActionTypes from './city.types.js';
 
 const INITIAL_STATE = {
-    selectedCity: '',
+    selectedCity: {id:'215854', name:'Tel Aviv'},
     autocompleteCities: [],
     isFetching: false,
     errorMessage: undefined
@@ -32,6 +32,11 @@ const cityReducer = (state = INITIAL_STATE, action) =>  {
                 ...state,
                 isFetching: false,
                 errorMessage: action.payload
+            };
+        case CityActionTypes.SET_SELECTED_CITY:
+            return {
+                ...state, 
+                selectedCity: action.payload
             };
         default:
             return state;

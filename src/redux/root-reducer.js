@@ -1,7 +1,9 @@
 import { combineReducers } from 'redux';
 
 import cityReducer from './city/city.reducer';
+import weatherReducer from './weather/weather.reducer';
 
 export default combineReducers({
-    city: cityReducer
+    city: cityReducer,
+    weather: weatherReducer
 });

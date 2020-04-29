@@ -1,6 +1,6 @@
 import CityActionTypes from './city.types.js';
 
-const API_KEY = 'hPv0X7xUCveAHe9KDSuSATzh9weAOkVK';
+import { API_KEY } from '../utils';
 
 export const searchCity = city => ({
     type: CityActionTypes.SEARCH_CITY,
@@ -34,4 +34,9 @@ export const fetchCitiesStartAsync = city => {
             dispatch(fetchCitiesFailure(error.message));
         }
     }
-}
+};
+
+export const setSelectedCity = city => ({
+    type: CityActionTypes.SET_SELECTED_CITY,
+    payload: city
+});

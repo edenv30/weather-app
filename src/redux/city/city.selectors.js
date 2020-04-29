@@ -11,3 +11,8 @@ export const selectAutocompleteCities = createSelector(
 //     [selectAutocompleteCities],
 
 // )
+
+export const selectCity = createSelector(
+    [selectCities],
+    city => city.selectedCity
+);
