@@ -2,8 +2,8 @@ import WeatherActionTypes from './weather.types';
 
 const INITIAL_STATE = {
     id: '215854', // default of Tel Aviv
-    currentWeather: '',
-    // degree: '',
+    // currentWeather: '',
+    degree: '',
     // weatherText: '',
     isFetching: false,
     errorMessage: undefined
@@ -25,7 +25,7 @@ const weatherReducer = (state = INITIAL_STATE, action) => {
             return {
                 ...state,
                 isFetching: false,
-                currentWeather: action.payload
+                degree: action.payload
             };
         case WeatherActionTypes.FETCH_CURRENT_WEATHER_FAILURE:
             return {

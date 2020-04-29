@@ -15,14 +15,13 @@ import { ReactComponent as Logo } from '../../assests/meteorology.svg';
 
 const LogoDirectory = ({ city, degree, fetchCurrentWeatherStartAsync }) => { 
     
-    // const temp = fetchCurrentWeatherStartAsync(city.id)
-    // console.log(temp)
+    fetchCurrentWeatherStartAsync(city.id);
     return (
     <div className='logo-container'>
         <Logo className='logo'/>
         <div>
             <p>{city.name}</p>
-            <p>{fetchCurrentWeatherStartAsync(city.id)}</p>
+            <p>{degree}°C</p>
         </div>
     </div>
     )

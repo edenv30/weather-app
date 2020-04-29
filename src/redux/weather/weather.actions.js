@@ -20,13 +20,13 @@ export const fetchCurrentWeatherStartAsync = cityId => {
     return async dispatch => {
         try {
             dispatch(fetchCurrentWeatherStart());
-            let arr = [];
+            // let arr = [];
             const response = await fetch(`http://dataservice.accuweather.com/currentconditions/v1/${cityId}.json?apikey=${API_KEY}`);
             const data = await response.json();
             let degree = await data[0].Temperature.Metric.Value;
-            let weatherText = await data[0].WeatherText;
-            arr[0]= await {id: cityId, temp: degree, weatherText: weatherText};
-            dispatch(fetchCurrentWeatherSuccess(arr));
+            // let weatherText = await data[0].WeatherText;
+            // arr[0]= await {id: cityId, temp: degree, weatherText: weatherText};
+            dispatch(fetchCurrentWeatherSuccess(degree));
         } catch (error) { 
             dispatch(fetchCurrentWeatherFailure(error.message));
         }

@@ -30,7 +30,6 @@ const SearchField = ({ autocompleteCities, fetchCitiesStartAsync, setSelectedCit
     console.log("Focused");
   }
 
-
   return (
     <div>
         <div className='autocomplete'>
