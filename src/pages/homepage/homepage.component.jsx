@@ -67,46 +67,44 @@ const arr = [
     } 
 ];
 
-class HomePage extends React.Component {
+const HomePage = () => {
 
-    constructor() {
-        super();
+    // constructor() {
+    //     super();
 
-        this.state = {
-            // placeholder: 'Tel-Aviv',
-            searchField: '',
-            cities: []
+    //     this.state = {
+    //         // placeholder: 'Tel-Aviv',
+    //         searchField: '',
+    //         cities: []
 
-        }
-    }
+    //     }
+    // }
 
-    setCities = async (CITY_NAME) => {
-        // let response, data = [];
-        // if (CITY_NAME.trim().length > 0) {
-        //   response = await fetch(`https://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=${API_KEY}&q=${CITY_NAME}`)
-        //   data = await response.json();
-        // }
-        // console.log(data);
-        this.setState({cities: arr.map(city => city.LocalizedName)});
-        console.log(this.state.cities);
+    // setCities = async (CITY_NAME) => {
+    //     // let response, data = [];
+    //     // if (CITY_NAME.trim().length > 0) {
+    //     //   response = await fetch(`https://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=${API_KEY}&q=${CITY_NAME}`)
+    //     //   data = await response.json();
+    //     // }
+    //     // console.log(data);
+    //     this.setState({cities: arr.map(city => city.LocalizedName)});
+    //     console.log(this.state.cities);
         
-    }
+    // }
 
-    handleChange = (e) => {
-        this.setState({ searchField: e.target.value })
-        this.setCities(this.state.searchField);
-        // this.setCities(this.state.searchField); handleChange={this.handleChange}
-    }
+    // handleChange = (e) => {
+    //     this.setState({ searchField: e.target.value })
+    //     this.setCities(this.state.searchField);
+    //     // this.setCities(this.state.searchField); handleChange={this.handleChange}
+    // }
 
-    render() {
-        return (
+    return(
             <div className='homepage'>
                 <SearchField />
                 <Directory  />
             </div>
         )
-    }
-    
+
 }
 
 export default HomePage;

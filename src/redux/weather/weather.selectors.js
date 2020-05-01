@@ -6,3 +6,8 @@ export const selectDegereeOfIdCity = createSelector(
     [selectIdOfCity],
     weather => weather.degree
 );
+
+export const selectFiveDays = createSelector(
+    [selectIdOfCity],
+    weather => weather.fiveDays
+);
