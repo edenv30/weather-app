@@ -28,8 +28,8 @@ function App() {
       />
       <Header />
       <Switch>
-        <Route exact path='/' component={HomePage} />
-        <Route path='/favorites' component={FavoritesPage} />
+        <Route exact path='/weather-app' component={HomePage} />
+        <Route path='/weather-app/favorites' component={FavoritesPage} />
       </Switch>
     </div>
   );

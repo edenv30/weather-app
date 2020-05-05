@@ -7,8 +7,8 @@ const Header = () => (
     <div className='header'>
         <p className='text-container'>Weather</p>
         <div className='options'>
-            <Link className='option' to='/'>Home</Link>
-            <Link className='option' to='/favorites'>Favorites</Link>
+            <Link className='option' to='/weather-app'>Home</Link>
+            <Link className='option' to='/weather-app/favorites'>Favorites</Link>
         </div>
     </div>    
 
