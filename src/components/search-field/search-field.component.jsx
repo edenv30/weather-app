@@ -23,7 +23,6 @@ const SearchField = ({ autocompleteCities, fetchCitiesStartAsync, setSelectedCit
   }
 
   const handleOnSelect = item => {
-    console.log('utem',item);
     // the item selected
     setSelectedCity(item);
     fetchFiveDaysStartAsync(item.id);

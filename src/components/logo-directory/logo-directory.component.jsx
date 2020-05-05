@@ -11,7 +11,6 @@ import { fetchCurrentWeatherStartAsync } from '../../redux/weather/weather.actio
 import './logo-directory.styles.scss';
 
 import { ReactComponent as Logo } from '../../assests/meteorology.svg';
-// console.log('temp', temp.currentWeather.temp )
 
 const LogoDirectory = ({ city, degree, fetchCurrentWeatherStartAsync }) => { 
     

@@ -7,11 +7,6 @@ export const selectAutocompleteCities = createSelector(
     city => city.autocompleteCities
 );
 
-// export const selectUpdateAutocompleteCities = createSelector(
-//     [selectAutocompleteCities],
-
-// )
-
 export const selectCity = createSelector(
     [selectCities],
     city => city.selectedCity

@@ -6,7 +6,6 @@ import FavoriteLogoDirectory from '../favorite-logo-directory/favorite-logo-dire
 import './directory.styles.scss';
 
 import CardDaysContainer from '../card-days-container/card-days-container.component';
-//        <LogoDirectory />
 
 const Directory = () => (
     <div className='directory'>

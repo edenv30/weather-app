@@ -20,7 +20,6 @@ class CardDaysContainer extends React.Component {
 
     render() {
         const { fiveDays } = this.props;
-        console.log('fiveDays: ',fiveDays);
             return(
                 <div>
                 {

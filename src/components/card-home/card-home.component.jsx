@@ -1,13 +1,11 @@
 import React from 'react';
 
+import { convertFerToCel } from '../../redux/utils';
+
 import './card-home.styles.scss';
 
 const CardHome = ({ day }) => {
     const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-    const convertFerToCel = value => {
-        const cel = ((value-32)*5)/9;
-         return cel | 0;
-    }
 
     return (
     <div className='waether-card'>
