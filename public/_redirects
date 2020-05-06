@@ -1,5 +1,10 @@
 /*    /index.html   200
 
+[[redirects]]
+from = "/"
+to = "/keen-morse-78de06.netlify.app/"
+status = 200
+force = false
 
 [[redirects]]
 from = "/favorites"
@@ -8,8 +13,3 @@ status = 200
 force = false
 
 
-[[redirects]]
-from = "/"
-to = "/"
-status = 200
-force = false
