@@ -1,14 +1,1 @@
 /*    /index.html   200
-
-[[redirects]]
-  from = "/"
-  to = "/"
-  status = 301
-
-[[redirects]]
-from = "/favorites"
-to = "/favorites"
-status = 200
-force = false
-
-
