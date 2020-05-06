@@ -7,8 +7,8 @@ const Header = () => (
     <div className='header'>
         <p className='text-container'>Weather</p>
         <div className='options'>
-            <Link className='option' to='https://5eb282ea4e5034a4387d405d--keen-morse-78de06.netlify.app//weather-app'>Home</Link>
-            <Link className='option' to='https://5eb282ea4e5034a4387d405d--keen-morse-78de06.netlify.app//weather-app/favorites'>Favorites</Link>
+            <Link className='option' to='keen-morse-78de06.netlify.app//weather-app'>Home</Link>
+            <Link className='option' to='keen-morse-78de06.netlify.app//weather-app/favorites'>Favorites</Link>
         </div>
     </div>    
 

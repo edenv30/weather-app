@@ -28,8 +28,8 @@ function App() {
       />
       <Header />
       <Switch>
-        <Route exact path='https://5eb282ea4e5034a4387d405d--keen-morse-78de06.netlify.app/weather-app' component={HomePage} />
-        <Route path='https://5eb282ea4e5034a4387d405d--keen-morse-78de06.netlify.app//weather-app/favorites' component={FavoritesPage} />
+        <Route exact path='keen-morse-78de06.netlify.app/weather-app' component={HomePage} />
+        <Route path='keen-morse-78de06.netlify.app//weather-app/favorites' component={FavoritesPage} />
       </Switch>
     </div>
   );
