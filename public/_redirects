@@ -1,6 +1,2 @@
 /*    /index.html   200
-
-[[redirects]]
-from = "/static/*"
-to = "/static/:splat"
-status = 200
+/  /https://5eb293e72bb55b4c42ea2d6b--keen-morse-78de06.netlify.app/ 200
