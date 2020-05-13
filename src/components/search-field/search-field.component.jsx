@@ -30,7 +30,7 @@ const SearchField = ({ autocompleteCities, fetchCitiesStartAsync, setSelectedCit
   }
 
   const handleOnFocus = () => {
-    console.log("Focused");
+    // console.log("Focused");
   }
 
   return (
