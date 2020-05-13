@@ -11,7 +11,7 @@ export const setAutocompleteCities = async city => {
           arr = await data.map((city, i) => arr[i]={key:city.Key, name:city.LocalizedName});
           // let cities = data.map((city,i) => city.LocalizedName);
           // let res = Array.from(arr);
-          console.log(arr);
+          // console.log(arr);
           return arr;
         }
        return city;

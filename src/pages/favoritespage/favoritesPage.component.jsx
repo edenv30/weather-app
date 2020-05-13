@@ -10,7 +10,7 @@ import './favoritespage.styles.scss';
 
 const FavoritesPage = ({ favoritesList }) => (
     <div>
-    {console.log(favoritesList)}
+    
         <h1>Favorites Page</h1>
         <div>
                 {

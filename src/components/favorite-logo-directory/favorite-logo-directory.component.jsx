@@ -25,10 +25,9 @@ class FavoriteLogoDirectory extends React.Component{
     render() {
         const { city, degree, textDegree, isExistIN, isExist, addToFavorites, removeFromFavorites } = this.props;
         // console.log('degtee + textDegree:  ', degree, textDegree);
-        // if(degree && textDegree) {
-        //     console.log('In if');
-        //     this.setDegreeAndTextDegreeInCity(city, degree, textDegree);
-        // }
+        if(degree && textDegree) {
+            this.setDegreeAndTextDegreeInCity(city, degree, textDegree);
+        }
         isExistIN(city);
         return (
             <div>
@@ -71,8 +70,8 @@ const mapDispatchToProps = dispatch => ({
 const mapStateToProps = createStructuredSelector({
     city: selectCity,
     isExist: selectIsExist,
-    // degree: selectDailyForecastsDegreeMaximum,
-    // textDegree: selectDailyForecastsIconPharse
+    degree: selectDailyForecastsDegreeMaximum,
+    textDegree: selectDailyForecastsIconPharse
 });
 
 export default connect(mapStateToProps,mapDispatchToProps)(FavoriteLogoDirectory);

@@ -19,14 +19,14 @@ const SearchField = ({ autocompleteCities, fetchCitiesStartAsync, setSelectedCit
     // the values are cached. If the values are cached
     // "cached" contains the cached values, if not, returns false
     fetchCitiesStartAsync(string);
-    console.log('handleOnSearch: ',string, cached);
+    // console.log('handleOnSearch: ',string, cached);
   }
 
   const handleOnSelect = item => {
     // the item selected
     setSelectedCity(item);
     fetchFiveDaysStartAsync(item.id);
-    console.log('handleOnSelect: ',item);
+    // console.log('handleOnSelect: ',item);
   }
 
   const handleOnFocus = () => {
