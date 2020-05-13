@@ -24,7 +24,11 @@ class FavoriteLogoDirectory extends React.Component{
 
     render() {
         const { city, degree, textDegree, isExistIN, isExist, addToFavorites, removeFromFavorites } = this.props;
-        this.setDegreeAndTextDegreeInCity(city, degree, textDegree);
+        console.log('degtee + textDegree:  ', degree, textDegree);
+        if(degree && textDegree) {
+            console.log('In if');
+            this.setDegreeAndTextDegreeInCity(city, degree, textDegree);
+        }
         isExistIN(city);
         return (
             <div>
